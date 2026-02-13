@@ -10,7 +10,7 @@
       e.preventDefault();
 
       if (email && password) {
-        navigate("/Admin");  // success
+        navigate("/Admin");  
       } else if (!email || !password) {
         alert("Please enter both email and password!");
       } else {
@@ -25,7 +25,7 @@
         <div className="p-4 w-[400px] bg-blue-200/5 backdrop-blur-md rounded-2xl shadow-lg">
           <h2 className="text-2xl font-bold mb-6 text-center text-amber-50">ADMIN LOGIN</h2>
 
-          {/* ✅ Keep inputs inside the form */}
+         
           <form onSubmit={handleLogin} className="flex flex-col items-center">
             <input className="w-80 mb-4 p-3 border rounded-lg text-white"
               type="email"

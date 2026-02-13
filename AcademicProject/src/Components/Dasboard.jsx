@@ -26,7 +26,7 @@ export default function Dasboard() {
   ];
   return (
     <div>
-      {/* Back Button */}
+     
       <div className="flex justify-end mb-6">
         <button
 
@@ -46,7 +46,7 @@ export default function Dasboard() {
       </div>
 
 
-      {/* Chart */}
+      
       <div className="bg-white p-6 rounded-lg shadow">
         <h3 className="text-lg font-semibold mb-4">Downloads Trend</h3>
         <ResponsiveContainer width="100%" height={300}>

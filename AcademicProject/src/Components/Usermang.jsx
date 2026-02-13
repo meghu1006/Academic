@@ -20,7 +20,7 @@ export default function Usermang() {
   return (
     <div className="bg-[url(/usermanange.png)] bg-cover bg-center min-h-screen w-full p-6">
 
-      {/* Header */}
+
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-2xl font-semibold text-gray-800">
           User Management
@@ -40,7 +40,7 @@ export default function Usermang() {
         </div>
       </div>
 
-      {/* User Cards */}
+
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {users.map((user, index) => (
           <div
@@ -59,7 +59,7 @@ export default function Usermang() {
               {user.role}
             </p>
 
-            {/* Optional actions */}
+
             <div className="flex justify-center gap-3 mt-4">
               <button className="text-sm text-indigo-600 hover:underline">
                 Edit

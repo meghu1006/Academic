@@ -6,7 +6,7 @@ function Studentcource() {
   return (
     <div className="relative w-full h-screen overflow-hidden">
 
-      {/* Video Background */}
+      
       <video
         autoPlay
         muted
@@ -20,10 +20,10 @@ function Studentcource() {
         Your browser does not support the video tag.
       </video>
 
-      {/* Overlay: dark transparent */}
+      
       <div className="absolute top-0 left-0 w-full h-full bg-black/50 z-10"></div>
 
-      {/* Content */}
+      
       <div className="relative z-20 flex flex-col items-center justify-center h-full px-4 text-center">
 
         <h1 className="text-white text-4xl md:text-5xl font-semibold max-w-3xl mb-8 drop-shadow-lg">

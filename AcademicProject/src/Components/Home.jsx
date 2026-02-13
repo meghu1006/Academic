@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <div className="min-h-screen w-full bg-[url(/image.png)] bg-no-repeat bg-cover flex flex-col">
+    <div className="min-h-screen w-full bg-[url(/Home.png)] bg-no-repeat bg-cover flex flex-col">
 
      
       <nav className="w-full bg-gray-900 px-8 py-4 shadow-md">

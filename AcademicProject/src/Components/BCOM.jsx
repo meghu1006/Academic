@@ -13,7 +13,7 @@ function BCOM() {
         📚 Course Notes App
       </h1>
 
-      {/* Navigation */}
+      
       <nav className="flex justify-center gap-6 mb-10">
         <button
           onClick={() => setPage("home")}
@@ -30,7 +30,7 @@ function BCOM() {
         </button>
       </nav>
 
-      {/* Home Section */}
+      
       {page === "home" && (
         <div className="text-center bg-white/60 p-10 rounded-3xl shadow-xl max-w-xl mx-auto">
           <h2 className="text-3xl font-bold text-purple-800">Welcome 👋</h2>
@@ -40,7 +40,7 @@ function BCOM() {
         </div>
       )}
 
-      {/* BCom Section */}
+     
       {page === "bcom" && <Navbar/>}
         
       

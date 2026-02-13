@@ -29,7 +29,7 @@ const navigate = useNavigate();
  
 
   const handleSignup = (e) => {
-    e.preventDefault();// Stops default form submission→page reload
+    e.preventDefault();
 
 
     if (!formData.username || !formData.email || !formData.password) {

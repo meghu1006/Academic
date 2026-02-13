@@ -47,7 +47,7 @@ function Resources() {
               <li><a href="#bca-semester2" className="text-blue-500 hover:underline">Semester 2 Notes</a></li>
               <li><a href="#bca-programming" className="text-blue-500 hover:underline">Programming Concepts</a></li>
               <li><a href="#bca-database" className="text-blue-500 hover:underline">Database Management Systems</a></li>
-              {/* Add more BCA specific links here */}
+              
             </ul>
           </li>
           <li className="bg-gray-50 p-4 rounded-md shadow-sm">
@@ -57,7 +57,7 @@ function Resources() {
               <li><a href="#bcom-business-economics" className="text-blue-500 hover:underline">Business Economics</a></li>
               <li><a href="#bcom-corporate-law" className="text-blue-500 hover:underline">Corporate Law</a></li>
               <li><a href="#bcom-taxation" className="text-blue-500 hover:underline">Taxation</a></li>
-              {/* Add more BCom specific links here */}
+             
             </ul>
           </li>
         </ul>
@@ -66,20 +66,17 @@ function Resources() {
           We are continuously updating and expanding our collection to cover more subjects and semesters for both BCA and BCom programs. Stay tuned for more resources!
         </p>
 
-        {/* You can add sections for individual course notes below, using IDs like #bca-semester1 as anchors */}
+        
         <section id="bca-semester1" className="bg-gray-50 p-6 rounded-md shadow-sm mb-6">
           <h3 className="text-xl sm:text-2xl font-semibold text-blue-600 mb-3">BCA - Semester 1 Notes</h3>
           <p className="text-gray-700">Content for BCA Semester 1 notes goes here. You can link to PDFs or embed text directly.</p>
-          {/* Example: <a href="path/to/bca_sem1_math.pdf" target="_blank" className="text-blue-500 hover:underline mt-2 inline-block">Download Mathematics Notes</a> */}
         </section>
 
         <section id="bcom-financial-accounting" className="bg-gray-50 p-6 rounded-md shadow-sm mb-6">
           <h3 className="text-xl sm:text-2xl font-semibold text-blue-600 mb-3">BCom - Financial Accounting Notes</h3>
           <p className="text-gray-700">Content for BCom Financial Accounting notes goes here.</p>
-          {/* Example: <a href="path/to/bcom_fa_intro.pdf" target="_blank" className="text-blue-500 hover:underline mt-2 inline-block">Download Introduction to FA</a> */}
         </section>
 
-        {/* Continue adding sections for all your notes */}
 
       </div>
     </div>

@@ -12,29 +12,26 @@ const RegisterPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    
     if (!name || !course || !phone) {
       setError("Please fill all fields.");
       return;
     }
 
-   
     if (course !== "BCom") {
       setError("Only BCom students can continue.");
       return;
     }
 
-    
     setError("");
     navigate("/bcom");
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-200">
+    <div className="bg-[url('/register.png')] bg-cover bg-center h-screen flex justify-center items-center">
+      
       <div className="w-80 p-6 rounded-2xl bg-white shadow-xl">
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
 
-          
           <div>
             <label className="block font-medium mb-1">Student Name</label>
             <input
@@ -59,7 +56,6 @@ const RegisterPage = () => {
             </select>
           </div>
 
-          
           <div>
             <label className="block font-medium mb-1">Phone Number</label>
             <input
@@ -71,12 +67,10 @@ const RegisterPage = () => {
             />
           </div>
 
-          
           {error && (
             <p className="text-red-600 text-sm">{error}</p>
           )}
 
-          
           <button
             type="submit"
             className="bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600"
@@ -86,6 +80,7 @@ const RegisterPage = () => {
 
         </form>
       </div>
+
     </div>
   );
 };
