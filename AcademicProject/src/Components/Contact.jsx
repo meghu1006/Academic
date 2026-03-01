@@ -8,7 +8,7 @@ export default function Contact() {
         <h1 className="font-semibold text-lg">BCA Repository</h1>
         <ul className="flex gap-8 font-medium">
           
-          <li className="underline">Contact Us</li>
+         
           
         </ul>
         

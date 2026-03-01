@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const RegisterPage = () => {
+
   const navigate = useNavigate();
 
   const [name, setName] = useState("");
@@ -12,28 +13,34 @@ const RegisterPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    // Validation
     if (!name || !course || !phone) {
-      setError("Please fill all fields.");
-      return;
-    }
-
-    if (course !== "BCom") {
-      setError("Only BCom students can continue.");
+      setError("Please fill all fields");
       return;
     }
 
     setError("");
-    navigate("/bcom");
+
+    // ✅ Navigate based on selected course
+    if (course === "BCom") {
+      navigate("/bcom");
+    } 
+    else if (course === "BCA") {
+      navigate("/bca");
+    }
   };
 
   return (
     <div className="bg-[url('/register.png')] bg-cover bg-center h-screen flex justify-center items-center">
-      
+
       <div className="w-80 p-6 rounded-2xl bg-white shadow-xl">
+
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
 
           <div>
-            <label className="block font-medium mb-1">Student Name</label>
+            <label className="block font-medium mb-1">
+              Student Name
+            </label>
             <input
               type="text"
               placeholder="Enter name"
@@ -44,7 +51,9 @@ const RegisterPage = () => {
           </div>
 
           <div>
-            <label className="block font-medium mb-1">Course</label>
+            <label className="block font-medium mb-1">
+              Course
+            </label>
             <select
               value={course}
               onChange={(e) => setCourse(e.target.value)}
@@ -57,7 +66,9 @@ const RegisterPage = () => {
           </div>
 
           <div>
-            <label className="block font-medium mb-1">Phone Number</label>
+            <label className="block font-medium mb-1">
+              Phone Number
+            </label>
             <input
               type="tel"
               placeholder="Enter phone"
@@ -80,7 +91,6 @@ const RegisterPage = () => {
 
         </form>
       </div>
-
     </div>
   );
 };
