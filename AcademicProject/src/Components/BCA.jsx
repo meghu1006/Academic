@@ -2,22 +2,25 @@ import React, { useState } from "react";
 import SearchNotes from "./SearchNotes";
 import Tabs from "./Tabs";
 import FileLists from "./FileLists";
-const data = {
+
+
+ const data = {
   notes: [
-    {id:1,title:"C Programming Notes", file: "CProgramming_NEP_Syllabus.pdf" },
+    {id:1,title:"C PRORGRAMMING_NEP NOTES", file: "CProgramming_NEP_Syllabus.pdf" },
     {id:2,title:"DATA STRUCTURES USING C",file:"Data Structures Using C_NEP_Syllabus (1).pdf"},
-    {id:3,title:"OBJECT ORIENTED CONCEPTS USING JAVA",file:""},
+    {id:3,title:"OBJECT ORIENTED CONCEPTS USING JAVA",file:"Java_NEP_Syllabus_With_AWT.pdf"},
     {id:4,title:"DATABASE MANAGEMENT SYSTEMS",file:"DBMS_NEP (1) (1).pdf"},
     {id:5,title:"C# AND DOT NET FRAMEWORK",file:"CSharpandDotNetFramework22.pdf"},
     {id:6,title:"PYTHON PROGRAMMING",file:"Python_NEP_Notes.pdf"},
     {id:7,title:"COMPUTER MULTIMEDIA ANIMATION",file:""},
-    {id:8,title:"DESIGN & ANALYSIS OF ALGORITHMS",file:"AcademicProject/public/BCANOTES/ADA.pdf.pdf"},
+    {id:8,title:"DESIGN & ANALYSIS OF ALGORITHMS",file:""},
     {id:9,title:"STATISTICAL COMPUTING AND R PROGRAMMING",file:""},
     {id:10,title:"SOFTWARE ENGINEERING",file:""},
     {id:11,title:"CLOUD COMPUTING",file:""},
-    {id:12,title:"Data Mining and Datawarehouse",file:" Mining and Datawarehouse.pdf"},
+    {id:12,title:"DATA MINING AND DATAWAREHOUSE",file:"Data Mining and Datawarehouse Notes.pdf"},
     {id:13,title:"PHP_NEP_Notes",file:"PHP_NEP_Notes.pdf"},
-    {id:14,title:"Web Content Mangamengt  System,",file:"WebContentMangamengtSystem_NEP.pdf"}
+    {id:14,title:"WEB CONTENT MANGAMENGT SYSTEM",file:"WebContentMangamengtSystem_NEP.pdf"},
+    {id:15,title:"AI NOTES",file:""}
   ],
 
   questions: [
@@ -34,28 +37,31 @@ const data = {
     {id:11,title:"CLOUD COMPUTING  Question Paper",file:""},
     {id:12,title:"Data Mining and Datawarehouse  Question Paper",file:""},
     {id:13,title:"PHP_NEP_Notes Question Paper",file:""},
-    {id:14,title:"Web Content Mangamengt System  Question Paper",file:""}
+    {id:14,title:"Web Content Mangamengt System  Question Paper",file:""},
+    {id:15,title:"AI NOTES",file:""}
   ],
 
   labmanual: [
-    {id:1,title:"C Programming Lab Manual", file: "" },
-    {id:2,title:"DATA STRUCTURES USING C  Lab Manual",file:""},
+    {id:1,title:"C Programming Lab Manual", file: "CProgramming_Lab_Manual_NEP_Syllabus.pdf" },
+    {id:2,title:"DATA STRUCTURES USING C  Lab Manual",file:"DS lab (1).pdf"},
     {id:3,title:"OBJECT ORIENTED CONCEPTS USING JAVA Lab Manual",file:""},
     {id:4,title:"DATABASE MANAGEMENT SYSTEMS  Lab Manual",file:""},
     {id:5,title:"C# AND DOT NET FRAMEWORK  Lab Manual",file:""},
     {id:6,title:"PYTHON PROGRAMMING  Lab Manual",file:""},
-    {id:7,title:"COMPUTER MULTIMEDIA ANIMATION Lab Manual",file:"C:\Users\anilm\OneDrive\Desktop\Academic\AcademicProject\public\BCANOTES\Multimedia_and_Animation_Lab_Manual - Shortcut.lnk"},
+    {id:7,title:"COMPUTER MULTIMEDIA ANIMATION Lab Manual",file:""},
     {id:8,title:"DESIGN & ANALYSIS OF ALGORITHMS  Lab Manual",file:""},
     {id:9,title:"STATISTICAL COMPUTING AND R PROGRAMMING  Lab Manual",file:""},
-    {id:10,title:"PHP_NEP_Notes  Lab Manual",file:"PHP_NEP_Labmanual.pdf"}
+    {id:10,title:"PHP_NEP_Notes  Lab Manual",file:""},
+    {id:11,title:"AI NOTES",file:""},
+    {id:12,title:"COMPUTER FUNDAMENTALS LAB",file:""}
   ],
 
   projects: [
-    { id: 1, title: "", file: "" },
-    { id: 2, title: "", file: "" }
+    {id:1,title:"",file:""},
+    {id:2,title:"",file:""},
+    {id:3,title:"",file:""}
   ]
-};
-
+ };
 function BCA() {
   const [search, setSearch] = useState("");
   const [selected, setSelected] = useState("notes");

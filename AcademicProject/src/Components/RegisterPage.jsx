@@ -28,6 +28,10 @@ const RegisterPage = () => {
     else if (course === "BCA") {
       navigate("/bca");
     }
+    if (phone.length !== 10) {
+  setError("Phone number must be exactly 10 digits");
+  return;
+}
   };
 
   return (
@@ -73,6 +77,7 @@ const RegisterPage = () => {
               type="tel"
               placeholder="Enter phone"
               value={phone}
+               maxLength="10"
               onChange={(e) => setPhone(e.target.value)}
               className="w-full border rounded-lg px-3 py-2"
             />

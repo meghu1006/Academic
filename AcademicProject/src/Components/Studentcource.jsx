@@ -1,9 +1,13 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import Register from "./Register";
+
+
 
 function Studentcource() {
+
+
   const navigate = useNavigate();
+  
 
   return (
     <div className="relative w-full h-screen overflow-hidden">
@@ -19,38 +23,42 @@ function Studentcource() {
           src="https://www.pexels.com/download/video/33187889/"
           type="video/mp4"
         />
-        Your browser does not support the video tag.
       </video>
 
       {/* Dark Overlay */}
       <div className="absolute top-0 left-0 w-full h-full bg-black/50 z-10"></div>
 
       {/* Content */}
-      <div className="relative z-20 flex flex-col items-center justify-center h-full px-4 text-center">
+      <div className="relative z-20 flex flex-col justify-center h-full px-10 md:px-20">
 
-        <h1 className="text-white text-4xl md:text-5xl font-semibold max-w-3xl mb-8 drop-shadow-lg">
-          Welcome to Student Community Development
+        {/* Left Side Text */}
+        <h1 className="text-white text-4xl md:text-5xl font-semibold max-w-3xl mb-8 drop-shadow-lg text-left">
+          {"Welcome to Student Community  Development".split("").map((char, index) => (
+            <span
+              key={index}
+              className="inline-block animate-letter"
+              style={{ animationDelay: `${index * 0.05}s` }}
+            >
+              {char === " " ? "\u00A0" : char}
+            </span>
+          ))}
         </h1>
 
-        {/* Buttons Container */}
-        <div className="flex gap-4">
-
-          {/* Login Button */}
+        {/* Centered Buttons */}
+        <div className="w-full flex justify-center gap-6">
           <button
             onClick={() => navigate("/LoginPage")}
-            className="px-6 py-3 bg-black hover:bg-blue-500 text-white font-semibold rounded shadow-lg transition"
+            className="px-10 py-5 bg-black hover:bg-blue-500 text-white font-semibold rounded shadow-lg transition"
           >
             Login
           </button>
 
-          {/* Register Button */}
           <button
             onClick={() => navigate("/Register")}
-            className="px-6 py-3 bg-blue-500 hover:bg-green-500 text-white font-semibold rounded shadow-lg transition"
+            className="px-10 py-5  bg-black  hover:bg-blue-500 text-white font-semibold rounded shadow-lg transition"
           >
             Register
           </button>
-
         </div>
 
       </div>

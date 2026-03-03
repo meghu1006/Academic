@@ -17,7 +17,7 @@ import Resources from './Components/Resources'
 import Navbar from './Components/Navbar'
 import BCA from './Components/BCA'
 import Register from './Components/Register'
-
+import LandingPage from './Components/LandingPage'
 
 
 function App() {
@@ -27,7 +27,8 @@ function App() {
     <BrowserRouter>
 
       <Routes>
-        <Route path="/" element={<Studentcource />} />
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/student-course" element={<Studentcource />} />
         <Route path="/LoginPage" element={<LoginPage />} />
         <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />

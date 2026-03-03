@@ -1,7 +1,16 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 export default function Register() {
+  const fetchData = async () => {
+    try {
+      const response = await axios.post("https://localhost:44359/api/Registration/InsertRegisters");
+      console.log("Data from backend:", response.data);
+    } catch (error) {
+      console.error("Error calling backend:", error);
+    }
+  };
     const navigate = useNavigate();
   const [formData, setFormData] = useState({
     firstName: "",
@@ -30,14 +39,14 @@ export default function Register() {
                       bg-transparent 
                       backdrop-blur-md
                       border border-white/30">
-        <h2 className="text-2xl font-bold text-center mb-6">
+        <h2 className="text-2xl font-bold text-center mb-6 text-white">
           Create Account
         </h2>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           {/* First Name */}
           <div>
-            <label className="block text-sm font-medium mb-1">
+            <label className="block text-sm font-medium mb-1 text-white">
               First Name
             </label>
             <input
@@ -53,7 +62,7 @@ export default function Register() {
 
           {/* Last Name */}
           <div>
-            <label className="block text-sm font-medium mb-1">
+            <label className="block text-sm font-medium mb-1 text-white">
               Last Name
             </label>
             <input
@@ -69,7 +78,7 @@ export default function Register() {
 
           {/* Email */}
           <div>
-            <label className="block text-sm font-medium mb-1">
+            <label className="block text-sm font-medium mb-1 text-white">
               Email
             </label>
             <input
@@ -85,7 +94,7 @@ export default function Register() {
 
           {/* Password */}
           <div>
-            <label className="block text-sm font-medium mb-1">
+            <label className="block text-sm font-medium mb-1 text-white">
               Password
             </label>
             <input
@@ -94,7 +103,7 @@ export default function Register() {
               value={formData.password}
               onChange={handleChange}
               required
-              className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none"
+              className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none text-white"
               
             />
           </div>
