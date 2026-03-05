@@ -27,8 +27,8 @@ function Admin() {
         <h2 className="text-2xl font-bold p-6">Admin Panel</h2>
         <nav className="flex-1">
           <ul>
-            <li className="p-4 hover:bg-indigo-600 cursor-pointer" onClick={btn}>Dashboard</li>
-            <li className="p-4 hover:bg-indigo-600 cursor-pointer" onClick={btn1}>User Management</li>
+            <li className="p-4 hover:bg-indigo-600 cursor-pointer" onClick={btn}>Downloads</li>
+            <li className="p-4 hover:bg-indigo-600 cursor-pointer" onClick={btn1}>Vistors</li>
             
           </ul>
         </nav>

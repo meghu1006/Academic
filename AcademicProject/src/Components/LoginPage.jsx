@@ -7,8 +7,10 @@ import { IoEyeOutline, IoEyeOffOutline } from "react-icons/io5";
 import Home from './Home';
 
 
+
 function LoginPage() {
-const navigate = useNavigate();
+
+  const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
     username: "",
@@ -26,7 +28,7 @@ const navigate = useNavigate();
       [name]: value
     });
   };
- 
+
 
   const handleSignup = (e) => {
     e.preventDefault();
@@ -44,7 +46,7 @@ const navigate = useNavigate();
 
     alert("✅ Signup Successful!");
 
-        navigate("/home");
+    navigate("/home");
     setFormData({ username: "", email: "", password: "" });
   };
 
@@ -108,13 +110,26 @@ const navigate = useNavigate();
           onClick={handleSignup}
           className='bg-blue-500 text-white w-full h-10 rounded-[10px] hover:bg-blue-600 transition'>
           LOGIN
-      
+
         </button>
         
+        <div className="flex justify-end mb-10">
+          <p
+            onClick={() => navigate("/reset")}
+            className="text-blue-700 text-sm cursor-pointer hover:underline"
+          >
+            Forgot Password?
+          </p>
+        </div>
+
+
       </div>
-      
+
+
     </div>
-    
+
+
+
   )
 }
 

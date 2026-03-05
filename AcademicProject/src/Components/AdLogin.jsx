@@ -6,19 +6,21 @@
     const [email, setEmail] = useState("");
     const [password, setPass] = useState("");
 
-    const handleLogin = (e) => {
-      e.preventDefault();
+  const handleLogin = (e) => {
+  e.preventDefault();
 
-      if (email && password) {
-        navigate("/Admin");  
-      } else if (!email || !password) {
-        alert("Please enter both email and password!");
-      } else {
-        alert("Invalid data!");
-        navigate("/");
-      }
+  const adminEmail = "Meghanaks@gmail.com";
+  const adminPassword = "12345";
 
-    };
+  if (email === adminEmail && password === adminPassword) {
+
+    localStorage.setItem("admin", "true");   // save login
+    navigate("/Admin");
+
+  } else {
+    alert("Invalid Admin Credentials!");
+  }
+};
 
     return (
       <div className='flex justify-center items-center h-screen  bg-[url(/Adlogin.png)] bg-no-repeat bg-cover'>
